@@ -7,7 +7,7 @@ require("../models/categoryModel");
 require("../models/productImageModel");
 require("../models/productOptionsModel");
 
-Connection.sync({force: true})
+Connection.sync({alter: true})
 
 .then(() => {
     console.log('Banco de dados sincronizado com sucesso!');

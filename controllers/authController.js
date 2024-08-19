@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 class AuthController {
     async login(email, password) {
         try {
-            const user = UsersModel.findOne({ where: {email} });
+            const user = await UsersModel.findOne({ where: {email} });
             if(!user) {
                 throw new Error("Usuário não encontrado");
             }

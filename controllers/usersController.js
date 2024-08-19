@@ -8,22 +8,43 @@ class UsersController {
     }
 
     async buscarPorId(req, res) {
-        const id = req.params.id;
-        const dados = await UsersModel.findByPk(id); // Aguardando o resultado
-        if (dados) { // Se os dados existir, retorna eles no formato JSON
-            return res.json(dados); 
-        } else { // Senão, retorna uma mensagem de not found
-            return res.status(404).json({ mensagem: "Usuário não encontrado" });
+        try {
+            const id = req.params.id;
+            console.log(id)
+            // busca o usuario pelo ID passado como parametro na URL
+            const dados = await UsersModel.findByPk(id);
+    
+            if (dados) { // Se os dados existir, retorna eles no formato JSON
+                return res.json(dados); 
+            } else { // Senão, retorna uma mensagem de not found
+                return res.status(404).json({ mensagem: "Usuário não encontrado" });
+            }
+        } catch (error) {
+            // Captura qualquer erro inesperado e retorna uma mensagem de erro com status 500
+            return res.status(500).json({ mensagem: "Erro ao buscar usuário", error: error.message });
         }
+    
     }
 
     async cadastrar(req, res) {
         // Captura os dados do usuario e passa para o UsersModel
-        const dados = req.body;
-        await UsersModel.create(dados);
-        return res.status(201).json({
-            mensage: "usuario cadastrado com sucesso"
-        });
+        const { firstname, surname, email, password} = req.body;
+        try {
+            // Gera o hash da senha
+            const hashedPassword = await bcrypt.hash(password, 10);
+            const dados = {
+                firstname,
+                surname,
+                email,
+                password: hashedPassword,
+            };
+            await UsersModel.create(dados);
+            return res.status(201).json({
+                mensage: "usuario cadastrado com sucesso"
+            });
+        } catch (err) {
+            return res.status(500).json({ mensagem: "Erro ao cadastrar usuário", erro: err.message });
+        }
     }
 
     async atualizar(req, res) {
