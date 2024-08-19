@@ -1,0 +1,177 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fistname": "John Doe",
+            "surnome": "Doe",
+            "email": "john.doe@example.com",
+            "password": "senha123"
+        },
+        {
+            "id": 2,
+            "fistname": "Jane Doe",
+            "surnome": "Doe",
+            "email": "jane.doe@example.com",
+            "password": "senha456"
+        },
+        {
+            "id": 3,
+            "fistname": "Alice Doe",
+            "surnome": "Doe",
+            "email": "alice.doe@example.com",
+            "password": "senha789"
+        },
+        {
+            "id": 4,
+            "fistname": "Bob Smith",
+            "surnome": "Smith",
+            "email": "bob.smith@example.com",
+            "password": "senha1011"
+        },
+        {
+            "id": 5,
+            "fistname": "Emily Johnson",
+            "surnome": "Johnson",
+            "email": "emily.johnson@example.com",
+            "password": "senha1213"
+        },
+        {
+            "id": 6,
+            "fistname": "Michael Wilson",
+            "surnome": "Wilson",
+            "email": "michael.wilson@example.com",
+            "password": "senha1415"
+        }
+    ],
+
+    "products": [
+        {
+            "enabled": false,
+            "name": "Notebook Asus Vivobook Edition",
+            "slug": "notebook-asus-vivobook-edition",
+            "use_in_menu": false,
+            "stock": 20,
+            "description": "Com destalhes exclusivos no design , o ASUS Vivobook é o melhor notebook para trazer mais estilo e dinamismo para o seu dia a dia, com o desempenho que você precisa para realizar qualquer tarefa.",
+            "price": 10.99,
+            "price_with_discount": 0.3
+        },
+        {
+            "enabled": true,
+            "name": "Smartphone Samsung Galaxy S21 Ultra",
+            "slug": "smartphone-samsung-galaxy-s21-ultra",
+            "use_in_menu": true,
+            "stock": 15,
+            "description": "O Samsung Galaxy S21 Ultra é um smartphone ultra-performante, com a tecnologia de corrente de alta performance do Samsung Snapdragon 888, que permite uma velocidade de até 5G e 200 Hz.",
+            "price": 1599.99,
+            "price_with_discount": 0.2
+        },
+        {
+            "enabled": true,
+            "name": "Tablet Samsung Galaxy Tab S7",
+            "slug": "tablet-samsung-galaxy-tab-s7",
+            "use_in_menu": true,
+            "stock": 10,
+            "description": "O Samsung Galaxy Tab S7 é um tablet ultra-performante com a tecnologia de corrente de alta performance do Samsung Snapdragon 888, que permite uma velocidade de até 5G e 200 Hz.",
+            "price": 899.99,
+            "price_with_discount": 0.1
+        },
+        {
+            "enabled": true,
+            "name": "Headset Sony MDR-7506",
+            "slug": "headset-sony-mdr-7506",
+            "use_in_menu": true,
+            "stock": 5,
+            "description": "O Sony MDR-7506 é um headset wireless com design innovador, com a tecnologia Dolby Atmos, que permite uma experiência de som mais ativa e dinâmica.",
+            "price": 149.99,
+            "price_with_discount": 0.05
+        },
+        {
+            "enabled": true,
+            "name": "Mouse Logitech M570",
+            "slug": "mouse-logitech-m570",
+            "use_in_menu": true,
+            "stock": 12,
+            "description": "O Logitech M570 é um mouse wireless com design innovador, com a tecnologia Wireless, que permite uma experiência de uso mais fácil e confortável.",
+            "price": 89.99,
+            "price_with_discount": 0.05
+        },
+        {
+            "enabled": true,
+            "name": "Teclado Logitech G15",
+            "slug": "teclado-logitech-g15",
+            "use_in_menu": true,
+            "stock": 8,
+            "description": "O Logitech G15 é um teclado wireless com design innovador, com a tecnologia Wireless, que permite uma experiência de uso mais fácil e confortável.",
+            "price": 99.99,
+            "price_with_discount": 0.05
+        }
+    ],
+
+    "category": [
+        {
+            "name": "Computadores",
+            "slug": "computadores",
+            "use_in_menu": false
+        },
+        {
+            "name": "Monitors",
+            "slug": "monitores",
+            "use_in_menu": false
+        },
+        {
+            "name": "Mouses",
+            "slug": "mouses",
+            "use_in_menu": false
+        },
+        {
+            "name": "Teclados",
+            "slug": "teclados",
+            "use_in_menu": false
+        },
+        {
+            "name": "Headsets",
+            "slug": "headsets",
+            "use_in_menu": false
+        },
+        {
+            "name": "Processadores",
+            "slug": "processadores",
+            "use_in_menu": false
+        },
+        {
+            "name": "Memórias RAM",
+            "slug": "memorias-ram",
+            "use_in_menu": false
+        },
+        {
+            "name": "SSD",
+            "slug": "ssd",
+            "use_in_menu": false
+        },
+        {
+            "name": "Placas de Vídeo",
+            "slug": "placas-de-video",
+            "use_in_menu": false
+        },
+        {
+            "name": "Fontes de Alimentação",
+            "slug": "fontes-de-alimentacao",
+            "use_in_menu": false
+        },
+        {
+            "name": "Gabinetes",
+            "slug": "gabinetes",
+            "use_in_menu": false
+        },
+        {
+            "name": "Periféricos",
+            "slug": "perifericos",
+            "use_in_menu": false
+        },
+        {
+            "name": "Conectores",
+            "slug": "conectores",
+            "use_in_menu": false
+        }
+    ]
+}
