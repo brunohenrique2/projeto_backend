@@ -2,11 +2,22 @@ const CategoryModel = require('../models/categoriesModel');
 
 class CategoriesController {
     async listar(req, res) {
-        /*const limit = parseInt(req.params.limit) || 12 // Quantos itens seram retornados por pagina
-        const page = parseInt(req.params.page) || 1 // Qual pagina será retornada
-        const fields = req.params.fields ? req.params.fields.split(",") : null // Quais campos serão retornados na resposta. `split(',')` separa os campos em um array.
-        const use_in_menu = req_params.use_in_menu === true // Um filtro para retornar apenas categorias que podem aparecer no menu. Verifica se o valor é "true".
-        const offset = (page - 1) * limit; // Calcula o offset para limitar a quantidade de dados retornados por página*/
+        /*
+        // Quantos itens seram retornados por pagina
+        const limit = parseInt(req.params.limit) || 12
+
+        // Qual pagina será retornada
+        const page = parseInt(req.params.page) || 1
+
+        // Quais campos serão retornados na resposta. `split(',')` separa os campos em um array.
+        const fields = req.params.fields ? req.params.fields.split(",") : null
+
+        // Um filtro para retornar apenas categorias que podem aparecer no menu. Verifica se o valor é "true".
+        const use_in_menu = req_params.use_in_menu === true
+
+        // Calcula o offset para limitar a quantidade de dados retornados por página
+        const offset = (page - 1) * limit; 
+        */
         let query = req.query
         query = query.fields.split(",")
         const dados = await CategoryModel.findAll({

@@ -51,7 +51,7 @@ class UsersController {
         const id = req.params.id;
         const dados = req.body;
         if(id) {
-            await user.update(dados, { where: {id} }) // Atualiza o usuario onde for igual ao ID passando os novos dados
+            await UsersModel.update(dados, { where: {id} }) // Atualiza o usuario onde for igual ao ID passando os novos dados
             return res.json({
                 mensagem: "usuario atualizado com sucesso"
             });
